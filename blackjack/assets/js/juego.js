@@ -23,10 +23,22 @@ const crearDeck = () => {
             deck.push( esp + tipo);
         }
     }
-    console.log( deck );
+    // console.log( deck );
     deck = _.shuffle(deck);
     console.log( deck ); 
 }
 
 crearDeck();
+
+
+// Esta función me permite tomar una carta
+const pedirCarta = () => {
+
+    if ( deck.length === 0 ) {
+        throw 'No hay cartas en el deck';
+    }
+    const carta = deck.pop();
+    return carta;
+}
+
 
