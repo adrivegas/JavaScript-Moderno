@@ -7,6 +7,17 @@
 // 6- Todo lo privado al final de la clase
 
 class Persona {
+
+    static _conteo = 0;
+    static get conteo() {
+        return Persona._conteo + ' instancias';
+    }
+
+    static mensaje() {
+        console.log( this.nombre ); // undefined porque no estoy trabajando en una instancia
+        console.log('Hola a todos, soy un método stático');
+    }
+
     nombre = '';
     codigo = '';
     frase  = '';
@@ -17,6 +28,8 @@ class Persona {
         this.nombre = nombre;
         this.codigo = codigo;
         this.frase  = frase;
+
+        Persona._conteo++;
     }
 
     set setComidaFavorita( comida ) {
@@ -47,5 +60,9 @@ console.log( spiderman );
 // ironman.miFrase();
 
 spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
+console.log('Conteo stático', Persona._conteo );
+console.log( Persona.conteo );
+console.log( Persona.mensaje() );
+
 
 
