@@ -4,8 +4,15 @@
   "description": "Configuraciones iniciales de un proyecto webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "Adriana Venegas",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
 }
