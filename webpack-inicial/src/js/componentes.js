@@ -1,3 +1,6 @@
+import '../css/componentes.css';
+
+
 export const saludar = ( nombre = 'sin nombre' ) => {
     console.log('Creando etiqueta h1');
 
