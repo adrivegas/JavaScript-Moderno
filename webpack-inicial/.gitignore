@@ -1,22 +1,4 @@
 .vscode/
-
 node_modules/
 package-lock.json
-package.json
-prepros.config
-prepros-6.config
-gulpfile.js
-
-#carpetas de dist
-dist/css/*
-!dist/css/swiper.css
-!dist/css/fonts/
-!dist/css/icons/
-dist/img/*
-!dist/img/assets
-!dist/img/brand
-!dist/img/icons
-dist/js/*
-!dist/js/vendor
-dist/index.html
-dist/pages
+dist/
