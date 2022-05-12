@@ -58,7 +58,13 @@ divTodoList.addEventListener('click', (event) => {
         todoList.marcarCompletado(todoId);
         todoElemento.classList.toggle('completed');
 
-    } 
+    } else if (nombreElemento.includes('button')) { // hay que borrar el todo
+
+        todoList.eliminarTodo(todoId); //borra tarea del arreglo
+        divTodoList.removeChild(todoElemento); //borra la tarea del html
+
+    }
+
 
 });
 
