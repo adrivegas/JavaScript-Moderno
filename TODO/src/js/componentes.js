@@ -69,3 +69,20 @@ divTodoList.addEventListener('click', (event) => {
 });
 
 
+btnBorrar.addEventListener('click', () => {
+
+    todoList.eliminarCompletados();
+    //for inverso: se eliminan elementos de abajo hacia arriba
+    for (let i = divTodoList.children.length - 1; i >= 0; i--) {
+
+        const elemento = divTodoList.children[i];
+        // Si tiene la clase completado remueve el elemento
+        if (elemento.classList.contains('completed')) {
+            divTodoList.removeChild(elemento);
+        }
+
+    }
+
+});
+
+
