@@ -1,8 +1,14 @@
 import './styles.css';
 
-import { Tod } from './classes/todo.class'
-import { Todo } from '../../../../Downloads/todo-js-master/src/classes';
+import { Todo, TodoList } from './classes';
+
+
+export const todoList = new TodoList();
 
 const tarea = new Todo('Aprender JS');
+const tarea2 = new Todo('Almorzar');
 
-console.log(tarea);
+todoList.nuevoTodo( tarea );
+todoList.nuevoTodo( tarea2 );
+
+console.log(todoList);
