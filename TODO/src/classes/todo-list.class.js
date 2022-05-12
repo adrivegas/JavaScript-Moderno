@@ -53,8 +53,8 @@ export class TodoList {
         this.todos = ( localStorage.getItem('todo') )
                         ? JSON.parse( localStorage.getItem('todo') )
                         : [];
-        
-        // this.todos = this.todos.map( Todo.fromJson );
+        // map: barre los elementos del arreglo y retorna un nuevo arreglo mutado
+        this.todos = this.todos.map( Todo.fromJson );
     }
 
 }
