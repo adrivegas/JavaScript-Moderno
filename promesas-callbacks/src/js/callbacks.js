@@ -23,3 +23,4 @@ export const buscarHeroe = ( id, callback ) => {
 
 }
 
+console.log('fin del programa');
