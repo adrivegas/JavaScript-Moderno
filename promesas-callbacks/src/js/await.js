@@ -8,3 +8,26 @@ export const obtenerHeroesArr = async() => {
 };
 
 
+export const obtenerHeroeAwait = async( id ) => {
+
+    try {
+
+        const heroe = await buscarHeroeAsync( id );
+        return heroe;
+
+    }catch( err ) {
+        console.log( 'CATCH!!!' );
+        return {
+            nombre: 'Sin nombre',
+            poder: 'Sin poder'
+        };
+
+    }
+}
+
+
+
+
+
+
+
