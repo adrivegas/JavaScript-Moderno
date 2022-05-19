@@ -20,7 +20,8 @@ export const buscarHeroe = ( id ) => {
     // promesa recibe un callback que se va a ejecutar en un momento independiente del tiempo
     return new Promise( ( resolve, reject ) => {
         if( heroe ) {
-            resolve( heroe )
+            
+            setTimeout(() => resolve( heroe ), 1000);
 
         } else {
             reject(`No existe un héroe con el id ${ id }`);
