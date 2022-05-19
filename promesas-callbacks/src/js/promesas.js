@@ -28,6 +28,18 @@ export const buscarHeroe = ( id ) => {
     });
 }
 
+// Función async, realiza exáctamente lo mismo que la de arriba
+export const buscarHeroeAsync = async( id ) => {
+    
+    const heroe = heroes[id];
+
+    if( heroe ) {
+        return heroe;
+    } else {
+        throw `No existe un héroe con el id ${ id }`;
+    }
+}
+
 
 const promesaLenta = new Promise( ( resolve, reject ) => {
     setTimeout(() => resolve('Promesa Lenta') , 2000);
