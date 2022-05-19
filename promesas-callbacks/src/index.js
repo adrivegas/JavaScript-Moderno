@@ -1,9 +1,5 @@
-import { buscarHeroe, buscarHeroeAsync } from './js/promesas'
+import { obtenerHeroesArr } from './js/await'
 
-buscarHeroe('capi')
-    .then( heroe => console.log(heroe))
-    .catch( console.warn);
+obtenerHeroesArr().then( console.table );
 
-buscarHeroeAsync('iron')
-    .then( heroe => console.log(heroe))
-    .catch( console.warn);
+

@@ -50,7 +50,7 @@ const promesaMedia = new Promise( ( resolve, reject ) => {
 });
 
 const promesaRapida = new Promise( ( resolve, reject ) => {
-    setTimeout(() => reject('Promesa Rápida') , 1000);
+    setTimeout(() => resolve('Promesa Rápida') , 1000);
 });
 
 
