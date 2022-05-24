@@ -8,3 +8,8 @@ CRUD.crearUsuario({
     name: 'Adriana',
     job: 'Frontend'
 }).then(console.log);
+
+CRUD.actualizarUsuario(1, {
+    name: 'Violeta',
+    job: 'Pintora'
+}).then(console.log);
