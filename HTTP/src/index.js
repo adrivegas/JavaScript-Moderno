@@ -1,27 +1,3 @@
-const jokeUrl = 'https://api.chucknorris.io/jokes/random';
+import { obtenerChiste } from "./js/http-provider";
 
-fetch(jokeUrl).then(resp => {
-    console.log(resp);
-    // le decimos a la respuesta que extraiga el body en formato de json
-    resp.json().then(data => {
-        console.log(data);
-    });
-});
-
-// Lo anterior usando desestructuración, para obtener los valores que necesito
-
-fetch(jokeUrl).then(resp => {
-    // le decimos a la respuesta que extraiga el body en formato de json
-    resp.json().then(({ id, value}) => {
-        console.log(id);
-        console.log(value);
-    });
-});
-
-// Mejor forma de ejecutar el código anterior
-
-fetch(jokeUrl)
-    .then( resp => resp.json())
-    .then( ({ id, value}) => {
-        console.log(id, value);
-    });
+obtenerChiste().then(console.log);
